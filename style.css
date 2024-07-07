@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Be Vietnam+Pro:wght@300&display=swap ");
+
+*{ 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro",sans-serif;
+    scroll-behavior: smooth;/*For smooth behavior*/
+
+}
+:root{
+    --bgnew:rgb(16, 123, 134);
+    /* --bgblue:#3353f4; */
+    /* --bgorange:#e84949; */
+}
+
+#wrapper{
+    height:100vh;/* Equals to the viewport*/ 
+    overflow-y: auto; /*Scroll only in y or vertical direction so auto*/ 
+    overflow-x:hidden;/* Don't want to scroll in the x direction or the horizontal direction */ 
+   
+}
+
+.container{
+    width: 1200px;
+    margin:0 auto;    /* for the container to take the center */
+    
+
+}
+.navbar{
+    display: flex; /*This makes the items to be present in the same line */
+    justify-content: space-between; /*Here this is used so that the name and the projects skills and the contact hyperlinks have space in their between */
+    align-items: center; /*This assigns the items in the center from vertical */
+
+    padding-top: 1 rem; 
+}
+.button{
+    display: flex;
+    gap: 2rem;
+}
+.logo{
+    width: 200px;  /* This is used for adjusting the logos size*/
+    
+    
+}
+
+.logo-container{
+    display: flex; /*So that the image of logo and the name in text are in the same line*/
+    align-items: center;/* So that the logo and the name come in the same line*/
+
+}
+.nav-items{
+    display: flex; /*This displays the hyperlinks in the same line*/
+    gap: 2rem; /*This creates space between the hyperlinks Projects,Skills and the Contact */
+    padding: 0 4rem;
+    text-decoration: underline;
+   
+ 
+   
+}
+.logo-text{
+    margin-left: -4rem; /*For positioning the text next to the logo */
+    font-size: 28px;
+
+}
+.nav-items div{
+    font-size: 20px; /*For the font size*/
+    font-weight: 700;/* For the thick or thin characters in text should be displayed. */
+    cursor: pointer; /* For how the pointer should change after pointing it*/
+
+}
+.nav-items div a{
+    color: black;  /*So that the hyperlinks have color black*/
+    
+
+}
+a{
+    text-decoration:none ; /*This ensures that the text has no underline in the hyperlinks*/ 
+
+}
+.nav-items div:hover{
+    font-weight: bold; /* For the thick or thin characters in text should be displayed. */
+    transition: 0.8s;/* So that transitions happen in within 0.8 seconds */
+}
+
+.hero-section{
+    position: relative; /*according */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* This is designed by me */
+    background-color:lavender;
+
+    gap: 5rem;
+    margin: 4 rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    
+}
+
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231,231,231);
+
+    bottom: -16%;
+    left: 0%;
+    font-weight: bold;
+    transition: all 3s;
+}
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    margin-left: 200px;
+   margin-bottom: 100px;
+
+    
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color:#4e45d5;
+    font-weight: 800;
+}
+.hero-section-sub-heading{
+    font-size:45px;
+    line-height: 45px;
+}
+.hero-section-description{
+    margin-top: 1rem;
+    width: 90%;
+    font-weight: 500;
+
+}
+
+/* Button Properties */
+
+.btn-pink{
+    background-color: var(--bgnew);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+    
+}
+/* a class for turning the linkedin color of link blue to white */
+.why{
+    color: white;
+}
+.btn-pink::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    
+}
+
+.btn-pink:hover::before{
+    transform: scaleX(1);
+}
+.btn-pink:hover{
+    border: solid 3px var(--bgorange);
+    color: black;
+}
+#btn-bottom{
+    display: none;
+}
+
+/* Hero section right part */
+.hero-section-right{
+    position: relative;
+    /* These all are given by me */
+    margin-top: 0em;
+    scale: 0.9;
+   margin-left: 2em;
+   margin-right: 13em;
+   margin-bottom: 10em;
+    
+    
+
+}
+.absolute{
+    position: absolute; 
+}
+
+.user-image{
+    padding: 1.5rem;
+    filter: grayscale(1);
+    background-color: rgb(16, 123, 134);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+}
+.user-image img{
+    /* Width and height are taken by me */
+    width: 300px;   
+    height: 400px;
+    z-index: -12;
+}
+@keyframes scaleImage{
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        
+
+    }
+    100%{
+        box-shadow: 3px 3p 10px black;
+        transform: scale(1);
+        filter:grayscale(0) ;
+
+    }
+
+}
+ /* Not added the icons */ 
+ /* .icon-dots{
+    z-index: 9;
+    bottom: -1rem;
+    right: 0;
+    animation-name: dotsAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes dotsAnimation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}  */
+
+ .project-section{
+    background-color: rgb(231,231,231);
+    margin: 4em;
+    /* This is added by me */
+    margin-top: 6em;
+}
+.page-Header{
+    color: var(--bgorange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.project-card{
+    width: 90%;
+    height: 550px;
+   background-color: var(--bgnew);
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   box-shadow: 0px 0px 40px #1f1f1f;
+}
+.project-card::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* For adding a background image in the projects remove the background-color and add the background-image in the #projects section down */
+    /* background-image: url(./Images/Portfolio.png); */ 
+    /* background-color: #1f1f1f;  */
+    
+     z-index: 0; 
+     transform: scaleX(1);
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+.project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 1;
+    opacity: 0;  
+    /* display: none;  */
+    opacity: 0;
+}
+
+.project-card:hover .project-number{ 
+     display:block; 
+     opacity: 1;
+  }
+ .project-number-right{
+    right: -40px;
+    top: -45px;
+}
+.project-number-left{
+    left: -40px;
+    top: -45px;
+} 
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s ;
+} 
+ .project-content-left{
+    left: 10%;
+}
+.project-content-right{
+    right: 10%; 
+}
+
+.project-skills-container{
+    width: 100%;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    flex-wrap:wrap ;
+    transition: all 0.2s;
+    border-radius: 5px;
+} 
+.project-skill img{
+    width: 80px;
+}
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3 rem;
+}
+.project-subheading{
+    width:95%;
+    font-size: 16px;
+    font-style: italic;
+}
+.btn-grp{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+.btn-project:hover{
+    border: none;
+}
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+.icon:hover{
+    color: var(--bgnew);
+}
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+/* #project1{
+    background-image: url(./Images/imgcompressors-DevanshiSikhwal-PCE21CS044.png);
+} */
+
+
+#project2{
+    /* background-image: url(./Images/imgcompressors-DevanshiSikhwal-PCE21CS044.png); */
+    margin-left: 120px;
+}
+/* #project3{
+    background-image: url(./Images/imgcompressors-DevanshiSikhwal-PCE21CS044.png);
+  }  */
+
+
+#project4{
+    /* background-image: url(./Images/imgcompressors-DevanshiSikhwal-PCE21CS044.png); */
+    margin-left: 120px;
+}
+
+.skills-container{
+    position: relative;
+    display: flex;
+    padding: 11em;
+    margin: 0;
+    gap: 30px;
+    flex-direction: column;
+}
+.skill-container-left{
+    width: 70%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.skill-container-right{
+    display: flex;
+    left: 650px;
+    top: -400px;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+.skill-fade-text{
+    position: absolute;
+    font-size: 15em;
+    font-style: bold;
+    color: rgb(231,231,231);
+    bottom :15%;
+    right: -27%;
+    user-select: none;
+    overflow-y: hidden;
+    /* display: none; */
+
+}
+.blob-style{
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    
+    z-index: -5;
+    translate: translate(-50%, -50%);
+    animation: blobAnimate 3s linear infinite;
+}
+@keyframes blobAnimate{
+    50%{
+        top: 52%;
+        left: 56%;
+    }
+}
+.skills-logo{
+    width: 90px;
+    transition: 0.5s;
+
+}
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+.skill-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgnew);
+    line-height:50px;
+}
+.caps{
+    font-size: 90px;
+}
+.skill-subheading{
+    margin-top:1rem ;
+    width: 85%;
+    text-align: justify;
+}
+
+/* Contact form */
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231,231,231);
+}
+
+.contactus-heading{
+    font-size: 5em;
+    color: var(--bgnew);
+    padding: 2rem;
+}
+.contactus-subheading{
+    font-size: 3rem;
+    /* margin-property added by me */
+    margin-left: 40px;
+    color: black;
+    /* For getting capital letter of each word in sentence */
+    text-transform: capitalize;
+}
+.contactus-form-container{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+.formfield-container{
+    width: 100%;
+}
+.formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+    font-weight: 500;
+    border: none;
+    margin-top: 27px;
+}
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+#submit-btn{
+    border: none;
+    font-size: 1.4rem;
+    margin:1rem 0;
+}
+#submit-btn:hover{
+    scale: 0.9;
+}
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+
+}
+/* Footer section */
+footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: var(--bgnew);
+    padding: 5rem;
+}
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-faded-text{
+    position: absolute;
+    left: 0 ;
+    bottom: 0;
+    color:rgb(190, 179, 179);
+    user-select: none;
+    font-size: 4em;
+}
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;  
+}
+.link-wrapper div a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+.icon-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+.wrapitcontainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
